@@ -10,7 +10,7 @@ namespace :db do
   
   desc "Create a sample database.yml file"
   task :database_yaml => :merb_env do
-    sample_location = File.join(File.dirname(__FILE__), "..", "merb", "orms", "data_mapper", "database.yml.sample")
+    sample_location = File.join(File.dirname(__FILE__), "database.yml.sample")
     target_location = Merb.dir_for(:config)
     FileUtils.cp sample_location, target_location
   end
